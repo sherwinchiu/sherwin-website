@@ -9,6 +9,7 @@ export interface Props {
   accent: string;
   glyph: string;
   href?: string;
+  linkLabel?: string;
   image?: string;
   imagePosition?: string;
 }
@@ -21,6 +22,7 @@ const {
   accent,
   glyph,
   href,
+  linkLabel,
   image,
   imagePosition = "center",
 } = Astro.props;
@@ -74,6 +76,16 @@ const Tag = href ? "a" : "div";
       <p class="text-xs text-[var(--muted)] mt-0.5">{subtitle}</p>
     </div>
     <p class="text-sm text-[var(--muted)] leading-relaxed">{description}</p>
+    {
+      linkLabel && (
+        <p class="text-xs text-[var(--accent)] flex items-center gap-1 mt-1">
+          <span>↗</span>
+          <span class="underline-offset-2 group-hover:underline">
+            {linkLabel}
+          </span>
+        </p>
+      )
+    }
     <div class="flex flex-wrap gap-1.5 pt-2">
       {
         tags.map((t) => (

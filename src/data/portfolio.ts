@@ -77,6 +77,7 @@ export const projects = [
     glyph: "⚡",
     image: "/projects/electrium.png",
     href: "https://electriummobility.com",
+    linkLabel: "electriummobility.com",
   },
   {
     title: "Pixplay",
