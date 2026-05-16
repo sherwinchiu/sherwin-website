@@ -5,7 +5,7 @@ export const experience = [
     period: "Jun 2025 – Present",
     location: "Waterloo, ON",
     description:
-      "Returned full-time to Geotab's OEM team after my co-op. I own and extend the cloud pipelines that bring manufacturer-native vehicle data into MyGeotab, so fleets can see OEM signals (battery state, charging, diagnostics, location) alongside the rest of their telematics in real time.",
+      "Returned full-time to Geotab's OEM team after my co-op. I build the cloud integrations that bring manufacturer vehicle data into MyGeotab, along with the internal tools used to manage OEM-connected vehicles in the registry.",
     bullets: [],
   },
   {
