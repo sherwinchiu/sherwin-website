@@ -119,6 +119,11 @@ const resumeHref = `${base}/Sherwin_Chiu_Resume.pdf`;
                       {job.location}
                     </span>
                   </div>
+                  {job.description && (
+                    <p class="mt-2 text-sm text-[var(--muted)] leading-relaxed">
+                      {job.description}
+                    </p>
+                  )}
                   <ul class="mt-2 flex flex-col gap-1.5 text-sm text-[var(--muted)] leading-relaxed">
                     {job.bullets.map((b) => (
                       <li class="flex gap-2">

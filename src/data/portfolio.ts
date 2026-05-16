@@ -4,6 +4,8 @@ export const experience = [
     role: "Software Engineer Intern",
     period: "Jan 2024 – Apr 2024",
     location: "Waterloo, ON",
+    description:
+      "Worked on the Connected Mobility team at one of the world's largest commercial telematics providers, building cloud-to-vehicle integrations that bring third-party OEM data into the Geotab platform.",
     bullets: [
       "Deployed automated CI/CD pipelines with GitLab to streamline builds, tests, and deployments.",
       "Built Mappers that fetch data from the Geotab API and route it to Geotab Admin via Pub/Sub.",
