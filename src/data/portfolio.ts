@@ -1,14 +1,23 @@
 export const experience = [
   {
     company: "Geotab Inc.",
+    role: "Software Engineer",
+    period: "Jun 2025 – Present",
+    location: "Waterloo, ON",
+    description:
+      "Returned full-time to Geotab's OEM team after my internship. Continuing to build the cloud integrations that connect manufacturer vehicle APIs into MyGeotab so fleets can see OEM-native data alongside the rest of their telematics.",
+    bullets: [],
+  },
+  {
+    company: "Geotab Inc.",
     role: "Software Engineer Intern",
     period: "Jan 2024 – Apr 2024",
     location: "Waterloo, ON",
     description:
-      "Worked on the Connected Mobility team at one of the world's largest commercial telematics providers, building cloud-to-vehicle integrations that bring third-party OEM data into the Geotab platform.",
+      "Joined the OEM team as an intern, building the cloud integrations that pull OEM vehicle API data into MyGeotab.",
     bullets: [
       "Deployed automated CI/CD pipelines with GitLab to streamline builds, tests, and deployments.",
-      "Built Mappers that fetch data from the Geotab API and route it to Geotab Admin via Pub/Sub.",
+      "Built Mappers that fetch data from OEM APIs and route it into MyGeotab via Pub/Sub.",
       "Wrote Terraform IaC to automate cloud resources and shipped a Webhook endpoint for the Hyundai OEM integration.",
       "Migrated legacy services from Virtual Machines to Kubernetes for higher throughput and cleaner code.",
     ],

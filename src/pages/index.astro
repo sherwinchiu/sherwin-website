@@ -94,8 +94,7 @@ const resumeHref = `${base}/Sherwin_Chiu_Resume.pdf`;
         <p class="text-[var(--muted)] leading-relaxed">
           I studied Computer Engineering at the University of Waterloo, with
           coursework in distributed computing, real-time operating systems,
-          compilers, and concurrency. Through the co-op program I shipped
-          production software at <span class="text-[var(--foreground)]">Geotab</span>, <span class="text-[var(--foreground)]">Motive</span>, and <span class="text-[var(--foreground)]">Swift Medical</span> — touching cloud infra, mobile, and medical imaging.
+          compilers, and concurrency. I&rsquo;m now a full-time Software Engineer at <span class="text-[var(--foreground)]">Geotab</span> on the OEM team, building cloud integrations that connect manufacturer vehicle APIs into MyGeotab. Before that, my co-ops took me through <span class="text-[var(--foreground)]">Geotab</span>, <span class="text-[var(--foreground)]">Motive</span>, and <span class="text-[var(--foreground)]">Swift Medical</span> — touching cloud infra, mobile, and medical imaging.
         </p>
         <p class="text-[var(--muted)] leading-relaxed mt-4">
           On the side I founded <span class="text-[var(--foreground)]">Electrium Mobility</span>, a UWaterloo design team that builds custom electric vehicles, and I keep a steady stream of personal hardware projects going — custom ESP32 boards, force-feedback VR gloves, sound-reactive sculptures, the works.
@@ -124,14 +123,16 @@ const resumeHref = `${base}/Sherwin_Chiu_Resume.pdf`;
                       {job.description}
                     </p>
                   )}
-                  <ul class="mt-2 flex flex-col gap-1.5 text-sm text-[var(--muted)] leading-relaxed">
-                    {job.bullets.map((b) => (
-                      <li class="flex gap-2">
-                        <span class="text-[var(--muted)] mt-2 h-1 w-1 rounded-full bg-current shrink-0" />
-                        <span>{b}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {job.bullets.length > 0 && (
+                    <ul class="mt-2 flex flex-col gap-1.5 text-sm text-[var(--muted)] leading-relaxed">
+                      {job.bullets.map((b) => (
+                        <li class="flex gap-2">
+                          <span class="text-[var(--muted)] mt-2 h-1 w-1 rounded-full bg-current shrink-0" />
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </li>
             ))
