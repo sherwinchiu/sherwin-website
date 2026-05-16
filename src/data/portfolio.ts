@@ -5,7 +5,7 @@ export const experience = [
     period: "Jun 2025 – Present",
     location: "Waterloo, ON",
     description:
-      "Returned full-time to Geotab's OEM team after my internship. Continuing to build the cloud integrations that connect manufacturer vehicle APIs into MyGeotab so fleets can see OEM-native data alongside the rest of their telematics.",
+      "Returned full-time to Geotab's OEM team after my co-op. I own and extend the cloud pipelines that bring manufacturer-native vehicle data into MyGeotab, so fleets can see OEM signals (battery state, charging, diagnostics, location) alongside the rest of their telematics in real time.",
     bullets: [],
   },
   {
@@ -14,7 +14,7 @@ export const experience = [
     period: "Jan 2024 – Apr 2024",
     location: "Waterloo, ON",
     description:
-      "Joined the OEM team as an intern, building the cloud integrations that pull OEM vehicle API data into MyGeotab.",
+      "Joined the OEM team as a co-op and shipped the integrations that pull manufacturer vehicle APIs into MyGeotab, including the end-to-end webhook flow for the Hyundai partnership.",
     bullets: [
       "Deployed automated CI/CD pipelines with GitLab to streamline builds, tests, and deployments.",
       "Built Mappers that fetch data from OEM APIs and route it into MyGeotab via Pub/Sub.",
@@ -27,6 +27,8 @@ export const experience = [
     role: "Software Engineer Intern",
     period: "Jan 2023 – Apr 2023",
     location: "San Francisco, CA",
+    description:
+      "Worked on the Motive Mobile Platform — the driver-facing app used across Motive's commercial fleet customers for hours-of-service, vehicle inspection, and dispatch. Focused on the core libraries that keep the app reliable in poor connectivity.",
     bullets: [
       "Integrated code analysis tools into Jenkins pipelines, increasing coverage from 25% to 34%.",
       "Resolved concurrency and multithreading bugs in the Motive Mobile Platform, improving background service reliability and reducing crashes.",
@@ -37,6 +39,8 @@ export const experience = [
     role: "Software Engineer Intern",
     period: "May 2022 – Oct 2022",
     location: "Toronto, ON",
+    description:
+      "Worked on the iOS app behind Swift Medical's wound-imaging platform — the capture and processing pipeline that clinicians use to image and track chronic wounds over time, including a custom hyperspectral camera attachment.",
     bullets: [
       "Built an iOS app to capture and process hyperspectral images of chronic wounds.",
       "Wrote OpenCV2 contour algorithms to detect bacteria and hemoglobin levels in wounds.",

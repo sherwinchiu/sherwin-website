@@ -105,8 +105,8 @@ const resumeHref = `${base}/Sherwin_Chiu_Resume.pdf`;
         <ol class="flex flex-col gap-8">
           {
             experience.map((job) => (
-              <li class="grid sm:grid-cols-[8.5rem_1fr] gap-2 sm:gap-6">
-                <div class="text-sm text-[var(--muted)] sm:pt-1">
+              <li class="grid sm:grid-cols-[10.5rem_1fr] gap-2 sm:gap-6">
+                <div class="text-sm text-[var(--muted)] sm:pt-1 whitespace-nowrap">
                   {job.period}
                 </div>
                 <div>
@@ -150,7 +150,7 @@ const resumeHref = `${base}/Sherwin_Chiu_Resume.pdf`;
         <div class="flex flex-col gap-5">
           {
             Object.entries(skills).map(([category, items]) => (
-              <div class="grid sm:grid-cols-[8.5rem_1fr] gap-1 sm:gap-6">
+              <div class="grid sm:grid-cols-[10.5rem_1fr] gap-1 sm:gap-6">
                 <div class="text-sm text-[var(--muted)] sm:pt-1.5">
                   {category}
                 </div>
