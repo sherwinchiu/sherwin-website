@@ -96,6 +96,7 @@ export const skills: Record<string, string[]> = {
   Languages: [
     "C++",
     "C",
+    "C#",
     "Rust",
     "TypeScript",
     "Python",
@@ -117,6 +118,7 @@ export const skills: Record<string, string[]> = {
   ],
   "Embedded & Hardware": [
     "ESP32 / S3 / C3",
+    "PlatformIO",
     "KiCad",
     "Cadence Virtuoso",
     "OpenCV",
