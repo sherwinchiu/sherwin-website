@@ -54,6 +54,8 @@ export const projects = [
     tags: ["ESP32-S3", "PCB Design", "VR", "IMU", "Power Electronics"],
     accent: "from-indigo-500/30 to-fuchsia-500/30",
     glyph: "🧤",
+    image: "/projects/get-a-grip.png",
+    href: "https://github.com/sherwinchiu/get-a-grip-on-reality",
   },
   {
     title: "Arcane Clap Light",
@@ -63,6 +65,7 @@ export const projects = [
     tags: ["ESP32-C3", "I2S DAC", "PWM", "3D Printing"],
     accent: "from-cyan-400/30 to-blue-500/30",
     glyph: "💡",
+    image: "/projects/arcane-clap.png",
   },
   {
     title: "Electrium Mobility",
@@ -72,6 +75,7 @@ export const projects = [
     tags: ["Leadership", "EV", "Firmware", "Hardware"],
     accent: "from-emerald-400/30 to-lime-400/30",
     glyph: "⚡",
+    image: "/projects/electrium.png",
     href: "https://electriummobility.com",
   },
   {
@@ -82,6 +86,8 @@ export const projects = [
     tags: ["ESP32-C3", "GCP", "ST7789", "Arduino"],
     accent: "from-rose-400/30 to-orange-400/30",
     glyph: "🖼️",
+    image: "/projects/pixplay.png",
+    href: "https://github.com/sherwinchiu/wireless-display",
   },
   {
     title: "ELECTREX-32",
@@ -91,6 +97,8 @@ export const projects = [
     tags: ["ESP32-S3", "PCB", "Antenna Design", "RF"],
     accent: "from-violet-500/30 to-purple-500/30",
     glyph: "📡",
+    image: "/projects/electrex-32.png",
+    href: "https://github.com/Electrium-Mobility",
   },
   {
     title: "ElectriCITY",
@@ -100,6 +108,7 @@ export const projects = [
     tags: ["GameMaker", "Game Design", "Game Jam"],
     accent: "from-amber-400/30 to-yellow-500/30",
     glyph: "🎮",
+    href: "https://github.com/sherwinchiu/bigmode-gamejam",
   },
 ];
 
