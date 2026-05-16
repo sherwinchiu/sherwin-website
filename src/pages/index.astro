@@ -1,0 +1,203 @@
+---
+import Base from "../layouts/Base.astro";
+import Section from "../components/Section.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import Icon from "../components/Icons.astro";
+import { experience, projects, skills, nav } from "../data/portfolio";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const resumeHref = `${base}/Sherwin_Chiu_Resume.pdf`;
+---
+
+<Base>
+  <div class="flex-1 bg-[var(--background)] text-[var(--foreground)]">
+    <header
+      class="sticky top-0 z-30 backdrop-blur-md bg-[var(--background)]/70 border-b border-[var(--border)]/60"
+    >
+      <div
+        class="mx-auto max-w-3xl px-6 sm:px-10 h-14 flex items-center justify-between"
+      >
+        <a
+          href="#top"
+          class="font-semibold tracking-tight hover:opacity-70 transition-opacity"
+        >
+          Sherwin Chiu
+        </a>
+        <nav
+          class="hidden sm:flex items-center gap-6 text-sm text-[var(--muted)]"
+        >
+          {
+            nav.map((item) => (
+              <a
+                href={item.href}
+                class="hover:text-[var(--foreground)] transition-colors"
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+    </header>
+
+    <main
+      id="top"
+      class="mx-auto max-w-3xl px-6 sm:px-10 pt-20 sm:pt-28 pb-24"
+    >
+      <section class="flex flex-col gap-6">
+        <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight">
+          Hey, I&rsquo;m Sherwin. <span class="inline-block">👋</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-[var(--muted)] leading-relaxed">
+          I&rsquo;m a Computer Engineering grad from the University of Waterloo.
+          I build things across the stack — from <span class="text-[var(--foreground)]">cloud backends</span> and <span class="text-[var(--foreground)]">CI/CD pipelines</span> to <span class="text-[var(--foreground)]">custom PCBs</span> and <span class="text-[var(--foreground)]">embedded firmware</span>.
+        </p>
+        <div class="flex flex-wrap items-center gap-3 pt-2 text-sm">
+          <a
+            href={resumeHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-full border border-[var(--border)] px-4 py-2 hover:bg-black/[.04] dark:hover:bg-white/[.06] transition-colors"
+          >
+            <Icon name="arrow-down" /> Resume
+          </a>
+          <a
+            href="mailto:sherwin.chiu89@gmail.com"
+            class="inline-flex items-center gap-2 rounded-full bg-[var(--foreground)] text-[var(--background)] px-4 py-2 hover:opacity-90 transition-opacity"
+          >
+            <Icon name="mail" /> Email
+          </a>
+          <div class="flex items-center gap-1 ml-1">
+            <a
+              href="https://github.com/sherwinchiu"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              class="p-2 rounded-full text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[.04] dark:hover:bg-white/[.06] transition-colors"
+            >
+              <Icon name="github" size={16} />
+            </a>
+            <a
+              href="https://linkedin.com/in/sherwin-chiu"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              class="p-2 rounded-full text-[var(--muted)] hover:text-[var(--foreground)] hover:bg-black/[.04] dark:hover:bg-white/[.06] transition-colors"
+            >
+              <Icon name="linkedin" size={16} />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <Section id="about" title="About">
+        <p class="text-[var(--muted)] leading-relaxed">
+          I studied Computer Engineering at the University of Waterloo, with
+          coursework in distributed computing, real-time operating systems,
+          compilers, and concurrency. Through the co-op program I shipped
+          production software at <span class="text-[var(--foreground)]">Geotab</span>, <span class="text-[var(--foreground)]">Motive</span>, and <span class="text-[var(--foreground)]">Swift Medical</span> — touching cloud infra, mobile, and medical imaging.
+        </p>
+        <p class="text-[var(--muted)] leading-relaxed mt-4">
+          On the side I founded <span class="text-[var(--foreground)]">Electrium Mobility</span>, a UWaterloo design team that builds custom electric vehicles, and I keep a steady stream of personal hardware projects going — custom ESP32 boards, force-feedback VR gloves, sound-reactive sculptures, the works.
+        </p>
+      </Section>
+
+      <Section id="experience" title="Experience">
+        <ol class="flex flex-col gap-8">
+          {
+            experience.map((job) => (
+              <li class="grid sm:grid-cols-[8.5rem_1fr] gap-2 sm:gap-6">
+                <div class="text-sm text-[var(--muted)] sm:pt-1">
+                  {job.period}
+                </div>
+                <div>
+                  <div class="flex flex-wrap items-baseline gap-x-2">
+                    <h3 class="font-medium">{job.role}</h3>
+                    <span class="text-[var(--muted)]">·</span>
+                    <span class="text-[var(--foreground)]">{job.company}</span>
+                    <span class="text-sm text-[var(--muted)]">
+                      {job.location}
+                    </span>
+                  </div>
+                  <ul class="mt-2 flex flex-col gap-1.5 text-sm text-[var(--muted)] leading-relaxed">
+                    {job.bullets.map((b) => (
+                      <li class="flex gap-2">
+                        <span class="text-[var(--muted)] mt-2 h-1 w-1 rounded-full bg-current shrink-0" />
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            ))
+          }
+        </ol>
+      </Section>
+
+      <Section id="projects" title="Projects">
+        <div class="grid sm:grid-cols-2 gap-4">
+          {projects.map((p) => <ProjectCard {...p} />)}
+        </div>
+      </Section>
+
+      <Section id="skills" title="Skills">
+        <div class="flex flex-col gap-5">
+          {
+            Object.entries(skills).map(([category, items]) => (
+              <div class="grid sm:grid-cols-[8.5rem_1fr] gap-1 sm:gap-6">
+                <div class="text-sm text-[var(--muted)] sm:pt-1.5">
+                  {category}
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  {items.map((item) => (
+                    <span class="rounded-full border border-[var(--border)] bg-[var(--card)] px-3 py-1 text-xs">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </Section>
+
+      <Section id="contact" title="Contact">
+        <p class="text-[var(--muted)] leading-relaxed">
+          The quickest way to reach me is by email. I&rsquo;m always happy to
+          chat about new roles, hardware projects, or anything in between.
+        </p>
+        <div class="mt-5 flex flex-wrap gap-3 text-sm">
+          <a
+            href="mailto:sherwin.chiu89@gmail.com"
+            class="inline-flex items-center gap-2 rounded-full bg-[var(--foreground)] text-[var(--background)] px-4 py-2 hover:opacity-90 transition-opacity"
+          >
+            <Icon name="mail" /> sherwin.chiu89@gmail.com
+          </a>
+          <a
+            href="https://github.com/sherwinchiu"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-full border border-[var(--border)] px-4 py-2 hover:bg-black/[.04] dark:hover:bg-white/[.06] transition-colors"
+          >
+            <Icon name="github" size={16} /> GitHub
+          </a>
+          <a
+            href="https://linkedin.com/in/sherwin-chiu"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-full border border-[var(--border)] px-4 py-2 hover:bg-black/[.04] dark:hover:bg-white/[.06] transition-colors"
+          >
+            <Icon name="linkedin" size={16} /> LinkedIn
+          </a>
+        </div>
+      </Section>
+
+      <footer
+        class="mt-20 pt-8 border-t border-[var(--border)] text-sm text-[var(--muted)] flex flex-wrap items-center justify-between gap-2"
+      >
+        <span>© {new Date().getFullYear()} Sherwin Chiu</span>
+        <span>Built with Astro · Hosted on GitHub Pages</span>
+      </footer>
+    </main>
+  </div>
+</Base>
